@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>This channel is </h1>
+        <span class="checked">
+            {% for result in results %}
+            {{ result }}
+            {% endfor %}
+    </span>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Website Icon" type="png" href="{{ url_for('static',filename='img/logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/resp.css') }}">
+    <title>channel info</title>
+</head>
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="{{ url_for('static',filename='img/logo.png') }}" alt="logo"></div>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm" onclick="searchGoogle()"> Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+
+    <section class="background firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big"> Welcome</p>
+                <p class="text-small"> You can check verified channel below</p>
+                <div class="button">
+                    <form action="/search" method="POST">
+                        <input type="text" name="search_query" id="search" placeholder="Enter channel name">
+                        <button class="btn" >Check</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="secondHalf">
+                <img src="{{ url_for('static',filename='img/logo.png') }}" alt="Logo Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> AAJ TAK</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Living Media
+            <b>Founded / Launched</b>: December 2000
+            <b>Website</b>: <a href="https://www.aajtak.in" target="_main">AAJTAK</a>
+            <b>Tag Line / Slogan</b>: Sabse Tez
+            <b>Head Office</b>: Noida, Uttar Pradesh
+            <b>Contact Number</b>: <a href="tel:73 7000 7000"> 73 7000 7000 </a>
+        </pre>
+        </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/aajtk.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> AAJ TAK TEZ</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Living Media
+            <b>Founded / Launched</b>: December 2004
+            <b>Website</b>: <a href="https://www.aajtak.in/tez-livetv" target="_main">AAJTAK-TEZ</a>
+            <b>Tag Line / Slogan</b>: Tez samachar, Borring News Khalass
+            <b>Head Office</b>: Noida, Uttar Pradesh
+            <b>Contact Number</b>: <a href="tel:+91-120-4807100"> +91-120-4807100 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/aajtaktez.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> ABP NEWS</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Ananda Bazar Patrika (ABP) Group
+            <b>Founded / Launched</b>: 1998
+            <b>Website</b>: <a href="https://www.abplive.com" target="_main">ABPLIVE</a>
+            <b>Tag Line / Slogan</b>: Aapko Rakhe Aage
+            <b>Head Office</b>: Noida, Uttar Pradesh
+            <b>Contact Number</b>: <a href="tel:+91 120 4070000"> +91 120 4070000 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/abpnews.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big"><b>CNBC AWAAZ</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: TV18 and NBCUniversal
+            <b>Website</b>: <a href="https://www.hindi.moneycontrol.com" target="_main">CNBC</a>
+            <b>Tag Line / Slogan</b>: India’s no. 1 business channel
+            <b>Head Office</b>: Mumbai, Maharashtra
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/cnbcawaaz.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big"><b>DD NEWS</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Prasar Bharati
+            <b>Founded / Launched</b>: November 2003
+            <b>Website</b>: <a href="https://www.ddnews.gov.in" target="_main">DD NEWS</a>
+            <b>Tag Line / Slogan</b>: Only News Complete News
+            <b>Head Office</b>: New Delhi, Delhi
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/ddnews.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big"><b>INDIA NEWS</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Information TV Pvt Ltd
+            <b>Website</b>: <a href="https://www.inkhabar.com" target="_main">INDIA NEWS</a>
+            <b>Tag Line / Slogan</b>: Desh Ki Dhadkan
+            <b>Head Office</b>: Noida, Uttar Pradesh
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/indianews.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section" id="services">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> Republic Bharat TV</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Arnab Goswami and Asianet News Networ
+            <b>Founded / Launched</b>: February 2019
+            <b>Website</b>: <a href="https://www.bharat.republicworld.com" target="_main">R. Bharat</a>
+            <b>Tag Line / Slogan</b>: Rashtra Ke Naam
+            <b>Head Office</b>: Mumbai, Maharashtra
+            <b>Contact Number</b>: <a href="tel:+91-22-4512 1000"> +91-22-4512 1000 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/rb.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> ZEE NEWS</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Essel Group
+            <b>Founded / Launched</b>: August 1999
+            <b>Website</b>: <a href="https://www.zeenews.india.com" target="_main">ZEE NEWS</a>
+            <b>Head Office</b>: Noida, Uttar Pradesh
+            <b>Contact Number</b>: <a href="tel:+91-0120-2511064"> +91-0120-2511064 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/zee.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section" id="services">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> NDTV India</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: New Delhi Television Ltd
+            <b>Founded / Launched</b>: 1984
+            <b>Website</b>: <a href="https://www.ndtv.com" target="_main">NDTV India</a>
+            <b>Tag Line / Slogan</b>: Truth First
+            <b>Head Office</b>: New Delhi, Delhi
+            <b>Contact Number</b>: <a href="tel:+91-11-2644 6666"> +91-11-2644 6666 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/ndtv.jpg') }}" alt="Logo image" class="imgFluid">
+             </div>
+    </section>
+    <hr>
+    <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big"><b> India TV</b></p>
+        <pre class="sectionSubTag text-small">
+            <b>Owner</b>: Independent News Services Private Ltd.
+            <b>Founded / Launched</b>: May 2004
+            <b>Website</b>: <a href="https://www.indiatvnews.com" target="_main">India TV</a>
+            <b>Tag Line / Slogan</b>: Aap Ki Awaaz
+            <b>Head Office</b>: Noida, Uttar Pradesh
+            <b>Contact Number</b>: <a href="tel:0120-3051000"> 0120-3051000 </a>
+        </pre>
+             </div>
+             <div class="thumbnail">
+                <img src="{{ url_for('static',filename='img/india-tv.jpg') }}" alt="Laptop image" class="imgFluid">
+             </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="text-center">Contact us</div>
+        <div class="form">
+            <input class="form-input" type="text" name="name" id="name" placeholder="Enter your name">
+            <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter your phone">
+            <input class="form-input" type="text" name="email" id="email" placeholder="Enter your email">
+            <textarea class="form-input" name="text" id="text" cols="50" rows="10" placeholder="Send your details"></textarea>
+            <button class="btn btn-sm btn-dark">submit</button>
+        </div>
+    </section>
+    <footer class="background">
+        <p class="text-footer">
+        Copyright &copy; 2027 - www.channelinfo.com - All rights reserved
+        </p>
+    </footer>
+    <script src="{{ url_for('static',filename='js/resp.js') }}"></script>
+</body>
+</html>
